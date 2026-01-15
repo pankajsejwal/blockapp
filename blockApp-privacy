@@ -1,0 +1,101 @@
+Privacy Policy
+
+Last updated: 15-Jan-26
+
+BlockApp is committed to protecting your privacy. This Privacy Policy explains how your personal information is collected, used, and disclosed by BlockApp.
+
+By accessing or using our Service, you signify that you have read, understood, and agree to our collection, storage, use, and disclosure of your personal information as described in this Privacy Policy and our Terms of Service.
+
+1. Information We Collect and How We Use It
+
+Our application operates primarily as an offline utility. We do not collect personal data to sell to third parties. However, to function as an App Locker, the app requires access to specific sensitive data on your device.
+
+A. App Usage Statistics (Critical)
+
+To perform its core function (locking apps), the app uses the PACKAGE_USAGE_STATS permission.
+
+What we access: The app monitors the "current foreground package" to detect when you open an app (e.g., WhatsApp, Gallery).
+
+How we use it: This data is processed instantly and locally on your device to determine if the opened app matches a blocked app in your settings.
+
+Data Retention: This data is NOT stored, NOT transmitted to any server, and NOT shared with third parties. It is ephemeral and exists only in the device's temporary memory (RAM) for milliseconds to trigger the lock screen.
+
+B. Installed Application Inventory
+
+To allow you to select which apps to lock, we use the QUERY_ALL_PACKAGES permission.
+
+What we access: The list of applications installed on your device (App Names and Package Names).
+
+How we use it: To display a list within the app so you can select which ones to protect.
+
+Data Retention: The list of "Locked Apps" is stored locally on your device in SharedPreferences. It is never uploaded to any external server.
+
+C. Passwords and Biometrics
+
+PIN/Password: The PIN you create is stored locally on your device. We do not have access to your PIN, and we cannot recover it if lost.
+
+Biometrics (Fingerprint): We use the standard Android Biometric API. The app does not store your fingerprint data; it simply asks the Android System to verify your identity. The result (Success/Fail) is returned to the app.
+
+2. Permissions
+
+We request the following permissions to ensure the app functions correctly:
+
+Usage Access: To detect when a locked app is launched.
+
+Display Over Other Apps (Overlay): To show the Lock Screen (PIN/Fingerprint) over the app you are trying to open.
+
+Foreground Service: To ensure the lock monitoring service runs reliably in the background without being killed by the system.
+
+Post Notifications: To display a persistent notification required by the Android System for background monitoring.
+
+3. Data Safety and Third-Party Services
+
+We do not transmit your personal data to any external servers. The app functions 100% offline regarding your personal app usage data.
+
+However, the app may use third-party services that may collect information used to identify you (e.g., for crash reporting or strictly necessary infrastructure).
+
+Google Play Services: Link to Google Play Services Privacy Policy
+
+4. Security
+
+We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.
+
+5. Children’s Privacy
+
+These Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13.
+
+6. Changes to This Privacy Policy
+
+We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.
+
+7. Contact Us
+
+If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at:
+
+pankajsejwal@gmail.com
+
+How to submit this to Google Play:
+
+Create a URL: Copy the text above (after editing the brackets) and host it online.
+
+Free option: Use Google Sites, Notion, or GitHub Pages. Google Play requires a valid URL link to the policy.
+
+Google Play Console -> App Content:
+
+Go to the Data Safety section.
+
+Does your app collect or share any of the required user data types?
+
+Answer: No. (Because "Collect" in Google's definition usually means sending it off the device. Since you process Usage Stats locally and ephemeral, you usually don't need to declare it as "Collected" for off-device server purposes, BUT you must disclose it in the Privacy Policy text above).
+
+However, to be safe with the strict bots, some developers declare:
+
+Data Type: App Info and Performance -> Installed Apps.
+
+Collection: Collected (Locally).
+
+Processing: Ephemeral (Not stored).
+
+Purpose: App Functionality.
+
+Submit: Paste the URL into the "Privacy Policy" field in the Store Listing setup.
