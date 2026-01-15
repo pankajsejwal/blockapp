@@ -74,28 +74,4 @@ If you have any questions or suggestions about our Privacy Policy, do not hesita
 
 pankajsejwal@gmail.com
 
-How to submit this to Google Play:
 
-Create a URL: Copy the text above (after editing the brackets) and host it online.
-
-Free option: Use Google Sites, Notion, or GitHub Pages. Google Play requires a valid URL link to the policy.
-
-Google Play Console -> App Content:
-
-Go to the Data Safety section.
-
-Does your app collect or share any of the required user data types?
-
-Answer: No. (Because "Collect" in Google's definition usually means sending it off the device. Since you process Usage Stats locally and ephemeral, you usually don't need to declare it as "Collected" for off-device server purposes, BUT you must disclose it in the Privacy Policy text above).
-
-However, to be safe with the strict bots, some developers declare:
-
-Data Type: App Info and Performance -> Installed Apps.
-
-Collection: Collected (Locally).
-
-Processing: Ephemeral (Not stored).
-
-Purpose: App Functionality.
-
-Submit: Paste the URL into the "Privacy Policy" field in the Store Listing setup.
