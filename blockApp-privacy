@@ -1,77 +1,117 @@
-Privacy Policy
+**Last Updated:** 29/01/2026
 
-Last updated: 15-Jan-26
+---
 
-BlockApp is committed to protecting your privacy. This Privacy Policy explains how your personal information is collected, used, and disclosed by BlockApp.
+## Privacy Policy
 
-By accessing or using our Service, you signify that you have read, understood, and agree to our collection, storage, use, and disclosure of your personal information as described in this Privacy Policy and our Terms of Service.
+At **BlockApps**, we are committed to protecting your privacy. This Privacy Policy explains how we handle your information and clearly describes the use of sensitive Android permissions required to provide app‑blocking and security features.
 
-1. Information We Collect and How We Use It
+---
 
-Our application operates primarily as an offline utility. We do not collect personal data to sell to third parties. However, to function as an App Locker, the app requires access to specific sensitive data on your device.
+## 1. Information Collection and Use
 
-A. App Usage Statistics (Critical)
+BlockApps is designed with privacy as a core principle.
 
-To perform its core function (locking apps), the app uses the PACKAGE_USAGE_STATS permission.
+* We **do not collect, store, transmit, or share** any personal information.
+* We do **not** collect browsing history or app usage data on external servers.
+* All processing and decision‑making occur **locally on your device**.
 
-What we access: The app monitors the "current foreground package" to detect when you open an app (e.g., WhatsApp, Gallery).
+---
 
-How we use it: This data is processed instantly and locally on your device to determine if the opened app matches a blocked app in your settings.
+## 2. Disclosure of Sensitive Permissions
 
-Data Retention: This data is NOT stored, NOT transmitted to any server, and NOT shared with third parties. It is ephemeral and exists only in the device's temporary memory (RAM) for milliseconds to trigger the lock screen.
+To deliver its core functionality, BlockApps requires access to certain Android system services. These permissions are used **strictly** for the purposes described below.
 
-B. Installed Application Inventory
+### Accessibility Service (AccessibilityService API)
 
-To allow you to select which apps to lock, we use the QUERY_ALL_PACKAGES permission.
+**Purpose**
+This is the core engine of app protection. It enables BlockApps to detect when a protected app is launched or brought to the foreground.
 
-What we access: The list of applications installed on your device (App Names and Package Names).
+**Usage**
 
-How we use it: To display a list within the app so you can select which ones to protect.
+* Display a secure lock screen overlay when a blocked app is opened.
+* Detect attempts to uninstall or *Force Stop* BlockApps through system settings and intercept them with a security prompt.
 
-Data Retention: The list of "Locked Apps" is stored locally on your device in SharedPreferences. It is never uploaded to any external server.
+**Privacy Assurance**
 
-C. Passwords and Biometrics
+* No keystrokes, messages, or screen content are recorded, monitored, or logged.
+* The service is used solely for functional blocking and protection.
 
-PIN/Password: The PIN you create is stored locally on your device. We do not have access to your PIN, and we cannot recover it if lost.
+---
 
-Biometrics (Fingerprint): We use the standard Android Biometric API. The app does not store your fingerprint data; it simply asks the Android System to verify your identity. The result (Success/Fail) is returned to the app.
+### Usage Access (PACKAGE_USAGE_STATS)
 
-2. Permissions
+**Purpose**
+To monitor app usage duration.
 
-We request the following permissions to ensure the app functions correctly:
+**Usage**
 
-Usage Access: To detect when a locked app is launched.
+* Required for **Smart Scheduling** features.
+* Allows enforcement of time‑based locks and session limits.
 
-Display Over Other Apps (Overlay): To show the Lock Screen (PIN/Fingerprint) over the app you are trying to open.
+---
 
-Foreground Service: To ensure the lock monitoring service runs reliably in the background without being killed by the system.
+### System Overlay (SYSTEM_ALERT_WINDOW)
 
-Post Notifications: To display a persistent notification required by the Android System for background monitoring.
+**Purpose**
+To display the lock screen above other applications.
 
-3. Data Safety and Third-Party Services
+**Usage**
 
-We do not transmit your personal data to any external servers. The app functions 100% offline regarding your personal app usage data.
+* Ensures the PIN/Biometric lock screen appears on top of protected apps.
+* Prevents interaction with locked apps until authentication succeeds.
 
-However, the app may use third-party services that may collect information used to identify you (e.g., for crash reporting or strictly necessary infrastructure).
+---
 
-Google Play Services: Link to Google Play Services Privacy Policy
+### Query All Packages (QUERY_ALL_PACKAGES)
 
-4. Security
+**Purpose**
+To identify installed applications on the device.
 
-We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.
+**Usage**
 
-5. Children’s Privacy
+* Allows users to view and select specific apps they wish to protect or block.
 
-These Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13.
+---
 
-6. Changes to This Privacy Policy
+### Biometric Authentication
 
-We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.
+**Purpose**
+To provide secure and convenient unlocking.
 
-7. Contact Us
+**Usage**
 
-If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at:
+* Uses Android’s system‑level **BiometricPrompt API**.
+* Fingerprint or facial recognition data is handled entirely by the Android system.
+* BlockApps never accesses, stores, or processes biometric data.
 
-pankajsejwal@gmail.com
+---
 
+## 3. Data Sharing
 
+* We do **not** sell, trade, or share any data with third parties.
+* Since no data is collected or stored on external servers, there is **no data to disclose**.
+
+---
+
+## 4. Security
+
+* Security settings such as PINs and protected app lists are stored securely on the device.
+* Users are advised to set a **strong PIN** for maximum protection.
+
+---
+
+## 5. Changes to This Policy
+
+This Privacy Policy may be updated periodically.
+
+* Updates will be reflected on this page.
+* The **Last Updated** date will be revised accordingly.
+
+---
+
+## 6. Contact Us
+
+If you have any questions or concerns regarding this Privacy Policy, you may contact us at:
+
+**Email:** [pankajsejwal@gmail.com](mailto:pankajsejwal@gmail.com)
