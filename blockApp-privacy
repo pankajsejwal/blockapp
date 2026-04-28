@@ -1,31 +1,45 @@
-**Last Updated:** 29/01/2026
-
----
-
 Privacy Policy for BlockApps
-Last Updated: October 26, 2023
-Welcome to BlockApps, developed by Pankaj Sejwal. Your privacy is our top priority. This Privacy Policy explains how we handle your information when you use our application.
-1. No Data Collection or Transmission
-BlockApps is a local-only utility. We do not collect, store, or transmit any personal data, usage statistics, or device information to external servers. All processing related to app blocking and scheduling happens strictly on your device.
-2. Sensitive Permissions & How We Use Them
-To provide its core functionality, BlockApps requires specific sensitive permissions. We use these only for the purposes described below:
-•
-Usage Access (PACKAGE_USAGE_STATS): This permission is required to detect which application is currently in the foreground. This allows BlockApps to determine if an app is on your "Blocked List" or has exceeded a "Scheduled Limit" so it can trigger the lock screen.
-•
-Overlay Permission (SYSTEM_ALERT_WINDOW): This allows BlockApps to display a secure lock screen over blocked applications. Without this, the app cannot prevent access to restricted content.
-•
-Query All Packages: We use this to generate the list of installed applications on your device, allowing you to select which ones you wish to protect or schedule.
-•
-Biometric Data: BlockApps uses the standard Android Biometric API to allow you to unlock apps. We do not have access to your actual biometric data (fingerprints or face scans); the verification is handled entirely by the Android System.
-3. Third-Party Sharing
-We do not sell, trade, or share any information with third parties. Since no data is collected or transmitted, there is no data available to be shared.
-4. Data Security
-Your App Lock PIN and schedules are stored locally in your device's private storage. These are not accessible to other applications and are cleared if you uninstall the app.
-5. Children’s Privacy
-BlockApps does not collect any personal information from children. Our app is intended to help users manage their own productivity and screen time.
-6. Changes to This Policy
-We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.
-7. Contact Us
-If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.
-Developer: Pankaj Sejwal
-Email: pankajsejwal@gmail.com
+
+BlockApps is designed to protect apps, messages, OTPs, and finance-app access on the user’s own device.
+
+Data stored locally:
+- Locked app list
+- App schedules and usage-limit settings
+- Security alerts and scan results
+- OTP vault entries
+- SMS inbox data when BlockApps is used as the default SMS app
+- User PIN hash and app settings
+- Selected finance apps for local VPN blocking
+
+Data sharing:
+BlockApps does not sell, share, or transfer user data to third parties.
+
+Network/backend:
+BlockApps does not use a backend server for app-lock, OTP vault, SMS storage, security scanning, or VPN protection.
+
+Analytics and ads:
+BlockApps does not include advertising SDKs, analytics SDKs, or third-party tracking SDKs.
+
+SMS and OTP:
+If BlockApps is set as the default SMS app, it can receive and display SMS/MMS messages. OTP-like messages may be copied into the OTP Vault. OTP Vault entries are stored locally and encrypted on the device using Android Keystore-backed encryption where available.
+
+Contacts:
+Contacts access is used only to help the user select SMS recipients by name. Contacts are not uploaded or shared.
+
+Installed apps:
+BlockApps reads installed-app information to show apps that can be locked, identify finance apps selected by the user, and detect risky permission combinations. Installed-app information is stored locally for protection features and is not shared.
+
+Accessibility:
+BlockApps uses Accessibility only for app-lock and tamper-protection behavior, such as detecting protected app/settings screens and showing the lock screen. It does not use Accessibility to collect passwords, payment details, or private message content.
+
+Usage Access:
+Usage Access is used to identify the foreground app so BlockApps can apply app locks, schedules, and limits.
+
+Device Admin:
+Device Admin is optional and used only for tamper protection. When enabled, Android requires Device Admin access to be removed before BlockApps can be uninstalled. BlockApps does not wipe the device, change the device password, or manage enterprise restrictions.
+
+VPN:
+The Finance Protection VPN is local-only. It is used to block internet access for selected finance or risk apps during protection events. Traffic is not forwarded to a remote VPN server.
+
+User control:
+Users can disable optional protection features in the app. Some protections may require PIN or biometric verification before being disabled.
