@@ -1,45 +1,97 @@
-Privacy Policy for BlockApps
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Privacy Policy - ScamJacket</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: -apple-system, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { color: #1a73e8; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        h2 { color: #202124; margin-top: 30px; }
+        h3 { color: #3c4043; background: #f8f9fa; padding: 5px 10px; border-radius: 4px; }
+        .box { background: #e8f0fe; padding: 15px; border-radius: 8px; border-left: 5px solid #1a73e8; margin: 20px 0; }
+        .meta { color: #666; font-size: 0.9em; margin-bottom: 30px; }
+        ul li { margin-bottom: 8px; }
+        code { background: #eee; padding: 2px 4px; border-radius: 3px; }
+    </style>
+</head>
+<body>
 
-BlockApps is designed to protect apps, messages, OTPs, and finance-app access on the user’s own device.
+    <h1>Privacy Policy for ScamJacket</h1>
+    <div class="meta">
+        <strong>Effective Date:</strong> April 20, 2026<br>
+        <strong>Developer:</strong> Pankaj Sejwal (SymbolArc Systems)<br>
+        <strong>Package:</strong> <code>com.sejwal.ScamJacket</code>
+    </div>
 
-Data stored locally:
-- Locked app list
-- App schedules and usage-limit settings
-- Security alerts and scan results
-- OTP vault entries
-- SMS inbox data when BlockApps is used as the default SMS app
-- User PIN hash and app settings
-- Selected finance apps for local VPN blocking
+    <p>
+        This Privacy Policy explains how <strong>ScamJacket</strong>, provided by 
+        <strong>SymbolArc Systems</strong>, accesses, uses, stores, and protects data on your device. 
+        ScamJacket is a device-side security and app protection tool.
+    </p>
 
-Data sharing:
-BlockApps does not sell, share, or transfer user data to third parties.
+    <div class="box">
+        <strong>The Short Version:</strong> ScamJacket operates entirely on your device. Your messages, OTPs, security data, and app usage information never leave your phone. There are no servers, no accounts, no analytics, and no third-party SDKs of any kind.
+    </div>
 
-Network/backend:
-BlockApps does not use a backend server for app-lock, OTP vault, SMS storage, security scanning, or VPN protection.
+    <h2>Summary</h2>
+    <ul>
+        <li><strong>Local Operation:</strong> ScamJacket is designed to work primarily on your device.</li>
+        <li><strong>No Backend:</strong> We do not operate an app backend; we cannot see your data.</li>
+        <li><strong>Zero Data Sale:</strong> We do not sell your data or use advertising SDKs.</li>
+        <li><strong>No Tracking:</strong> We do not use analytics or crash reporting SDKs.</li>
+        <li><strong>No Cloud Sync:</strong> <code>android:allowBackup</code> is explicitly disabled to prevent data from leaving your device via OS backups.</li>
+    </ul>
 
-Analytics and ads:
-BlockApps does not include advertising SDKs, analytics SDKs, or third-party tracking SDKs.
+    <h2>Data the App Accesses or Handles</h2>
 
-SMS and OTP:
-If BlockApps is set as the default SMS app, it can receive and display SMS/MMS messages. OTP-like messages may be copied into the OTP Vault. OTP Vault entries are stored locally and encrypted on the device using Android Keystore-backed encryption where available.
+    <h3>1. App usage and foreground information</h3>
+    <p>Uses <code>UsageStatsManager</code> to detect the active app to apply app locking and scheduled blocking.</p>
 
-Contacts:
-Contacts access is used only to help the user select SMS recipients by name. Contacts are not uploaded or shared.
+    <h3>2. Installed app inventory</h3>
+    <p>Queries <code>QUERY_ALL_PACKAGES</code> to allow you to select apps to block, identify finance apps for protection, and scan for malicious remote access tools.</p>
 
-Installed apps:
-BlockApps reads installed-app information to show apps that can be locked, identify finance apps selected by the user, and detect risky permission combinations. Installed-app information is stored locally for protection features and is not shared.
+    <h3>3. SMS and MMS data</h3>
+    <p>When set as the default SMS app, ScamJacket processes messages to support the <strong>OTP Vault</strong> and messaging features. OTPs are extracted and stored in a hardware-encrypted vault locally.</p>
 
-Accessibility:
-BlockApps uses Accessibility only for app-lock and tamper-protection behavior, such as detecting protected app/settings screens and showing the lock screen. It does not use Accessibility to collect passwords, payment details, or private message content.
+    <h3>4. Notification access</h3>
+    <p>Detects notification-listener changes to alert you if a suspicious app is trying to read your notifications.</p>
 
-Usage Access:
-Usage Access is used to identify the foreground app so BlockApps can apply app locks, schedules, and limits.
+    <h3>5. Phone state (READ_PHONE_STATE)</h3>
+    <p>Detects call-forwarding indicators to warn you about potential scam-related device compromises.</p>
 
-Device Admin:
-Device Admin is optional and used only for tamper protection. When enabled, Android requires Device Admin access to be removed before BlockApps can be uninstalled. BlockApps does not wipe the device, change the device password, or manage enterprise restrictions.
+    <h3>6. VPN / Network Blocking</h3>
+    <p>Uses <code>VpnService</code> to create a local "dead-end" tunnel. This blocks internet access for selected finance apps during risk conditions. <strong>No traffic is read, logged, or transmitted.</strong></p>
 
-VPN:
-The Finance Protection VPN is local-only. It is used to block internet access for selected finance or risk apps during protection events. Traffic is not forwarded to a remote VPN server.
+    <h3>7. Biometric & PIN Authentication</h3>
+    <p>Uses Android <code>BiometricPrompt</code> and Salted Hashes for PINs. We do not receive or store your actual biometric templates; authentication is handled by the OS.</p>
 
-User control:
-Users can disable optional protection features in the app. Some protections may require PIN or biometric verification before being disabled.
+    <h2>Data Storage & Security</h2>
+    <p>
+        All sensitive data (like the OTP Vault) is encrypted using <strong>AES-256-GCM</strong>. Encryption keys are stored in the <strong>Android Keystore</strong>, which is hardware-backed on supported devices. This means keys cannot be extracted from the device.
+    </p>
+
+    <h2>User Choice and Control</h2>
+    <p>You remain in full control of your data. You can:</p>
+    <ul>
+        <li>Revoke any permission in Android Settings at any time.</li>
+        <li>Clear the OTP Vault or Security Alerts within the app.</li>
+        <li><strong>Uninstall the app:</strong> This immediately and permanently deletes all data stored by ScamJacket from your device.</li>
+    </ul>
+
+    <h2>Children's Privacy</h2>
+    <p>ScamJacket does not knowingly collect any data from anyone, including children. Since no data leaves the device, it is inherently compliant with COPPA and similar regulations.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. The "Effective Date" at the top will indicate the latest revision.</p>
+
+    <h2>Contact</h2>
+    <p>
+        If you have questions about this Privacy Policy or ScamJacket' data handling:<br><br>
+        <strong>SymbolArc Systems</strong><br>
+        <strong>Pankaj Sejwal</strong><br>
+        Email: <a href="mailto:pankajsejwal@gmail.com">pankajsejwal@gmail.com</a>
+    </p>
+
+</body>
+</html>
