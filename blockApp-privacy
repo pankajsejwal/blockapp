@@ -1,97 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Privacy Policy - ScamJacket</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body { font-family: -apple-system, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
-        h1 { color: #1a73e8; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h2 { color: #202124; margin-top: 30px; }
-        h3 { color: #3c4043; background: #f8f9fa; padding: 5px 10px; border-radius: 4px; }
-        .box { background: #e8f0fe; padding: 15px; border-radius: 8px; border-left: 5px solid #1a73e8; margin: 20px 0; }
-        .meta { color: #666; font-size: 0.9em; margin-bottom: 30px; }
-        ul li { margin-bottom: 8px; }
-        code { background: #eee; padding: 2px 4px; border-radius: 3px; }
-    </style>
-</head>
-<body>
-
-    <h1>Privacy Policy for ScamJacket</h1>
-    <div class="meta">
-        <strong>Effective Date:</strong> April 20, 2026<br>
-        <strong>Developer:</strong> Pankaj Sejwal (SymbolArc Systems)<br>
-        <strong>Package:</strong> <code>com.sejwal.ScamJacket</code>
-    </div>
-
-    <p>
-        This Privacy Policy explains how <strong>ScamJacket</strong>, provided by 
-        <strong>SymbolArc Systems</strong>, accesses, uses, stores, and protects data on your device. 
-        ScamJacket is a device-side security and app protection tool.
-    </p>
-
-    <div class="box">
-        <strong>The Short Version:</strong> ScamJacket operates entirely on your device. Your messages, OTPs, security data, and app usage information never leave your phone. There are no servers, no accounts, no analytics, and no third-party SDKs of any kind.
-    </div>
-
-    <h2>Summary</h2>
-    <ul>
-        <li><strong>Local Operation:</strong> ScamJacket is designed to work primarily on your device.</li>
-        <li><strong>No Backend:</strong> We do not operate an app backend; we cannot see your data.</li>
-        <li><strong>Zero Data Sale:</strong> We do not sell your data or use advertising SDKs.</li>
-        <li><strong>No Tracking:</strong> We do not use analytics or crash reporting SDKs.</li>
-        <li><strong>No Cloud Sync:</strong> <code>android:allowBackup</code> is explicitly disabled to prevent data from leaving your device via OS backups.</li>
-    </ul>
-
-    <h2>Data the App Accesses or Handles</h2>
-
-    <h3>1. App usage and foreground information</h3>
-    <p>Uses <code>UsageStatsManager</code> to detect the active app to apply app locking and scheduled blocking.</p>
-
-    <h3>2. Installed app inventory</h3>
-    <p>Queries <code>QUERY_ALL_PACKAGES</code> to allow you to select apps to block, identify finance apps for protection, and scan for malicious remote access tools.</p>
-
-    <h3>3. SMS and MMS data</h3>
-    <p>When set as the default SMS app, ScamJacket processes messages to support the <strong>OTP Vault</strong> and messaging features. OTPs are extracted and stored in a hardware-encrypted vault locally.</p>
-
-    <h3>4. Notification access</h3>
-    <p>Detects notification-listener changes to alert you if a suspicious app is trying to read your notifications.</p>
-
-    <h3>5. Phone state (READ_PHONE_STATE)</h3>
-    <p>Detects call-forwarding indicators to warn you about potential scam-related device compromises.</p>
-
-    <h3>6. VPN / Network Blocking</h3>
-    <p>Uses <code>VpnService</code> to create a local "dead-end" tunnel. This blocks internet access for selected finance apps during risk conditions. <strong>No traffic is read, logged, or transmitted.</strong></p>
-
-    <h3>7. Biometric & PIN Authentication</h3>
-    <p>Uses Android <code>BiometricPrompt</code> and Salted Hashes for PINs. We do not receive or store your actual biometric templates; authentication is handled by the OS.</p>
-
-    <h2>Data Storage & Security</h2>
-    <p>
-        All sensitive data (like the OTP Vault) is encrypted using <strong>AES-256-GCM</strong>. Encryption keys are stored in the <strong>Android Keystore</strong>, which is hardware-backed on supported devices. This means keys cannot be extracted from the device.
-    </p>
-
-    <h2>User Choice and Control</h2>
-    <p>You remain in full control of your data. You can:</p>
-    <ul>
-        <li>Revoke any permission in Android Settings at any time.</li>
-        <li>Clear the OTP Vault or Security Alerts within the app.</li>
-        <li><strong>Uninstall the app:</strong> This immediately and permanently deletes all data stored by ScamJacket from your device.</li>
-    </ul>
-
-    <h2>Children's Privacy</h2>
-    <p>ScamJacket does not knowingly collect any data from anyone, including children. Since no data leaves the device, it is inherently compliant with COPPA and similar regulations.</p>
-
-    <h2>Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. The "Effective Date" at the top will indicate the latest revision.</p>
-
-    <h2>Contact</h2>
-    <p>
-        If you have questions about this Privacy Policy or ScamJacket' data handling:<br><br>
-        <strong>SymbolArc Systems</strong><br>
-        <strong>Pankaj Sejwal</strong><br>
-        Email: <a href="mailto:pankajsejwal@gmail.com">pankajsejwal@gmail.com</a>
-    </p>
-
-</body>
-</html>
+ScamJacket Privacy Policy
+Effective Date: May 20, 2024
+1. Privacy Commitment ScamJacket is built on a "Privacy-First" architecture. All security scanning, app locking, and network filtering happen locally on your device. We do not use external servers to process your data, and we do not have a backend database where your information is stored.
+2. Data Handled Locally (Does Not Leave Your Device)
+•
+App Lock Data: Your chosen PIN is stored as a salted hash on your device. We cannot recover this PIN if lost.
+•
+Usage Data: To provide app locking features, we monitor which application is currently in the foreground. This information is processed in real-time and is never logged or exported.
+•
+Security Alerts: Logs of suspicious activity (e.g., remote access tool detection) are stored locally for your review and can be cleared by you at any time.
+•
+Finance Protection List: The list of banking apps you choose to protect is stored only on your phone.
+3. Use of Sensitive Permissions & APIs
+•
+Accessibility Service API: Used to detect app launches instantly and provide robust Uninstall Protection. It reads only the package names of apps being opened. It NEVER inspects screen content, reads your messages, captures keystrokes, or monitors private interactions.
+•
+VpnService: Used to create a local "sink" (dead-end) to block internet access for selected finance apps when a threat is detected. No traffic is ever routed to an external server, and no packet content is inspected.
+•
+Usage Access: Used as a fallback to detect foreground apps if the Accessibility Service is not enabled.
+•
+Phone State: Used to detect malicious call-forwarding codes (USSD codes) and carrier forwarding indicators to prevent call hijacking. We do not record calls or read call logs.
+4. Data Sharing and Third Parties
+•
+No Third-Party SDKs: ScamJacket does not contain any third-party analytics (like Firebase or Mixpanel), crash reporting tools, or advertising SDKs.
+•
+No Data Selling: Since we do not collect your data on any server, we have no data to sell, share, or trade with third parties, advertisers, or government agencies.
+5. Data Retention and Deletion All data is stored in the app's private storage. If you uninstall ScamJacket, all associated data, settings, and logs are permanently deleted by the Android system.
+6. Changes to This Policy We may update our Privacy Policy from time to time. Any changes will be reflected by the "Effective Date" at the top of this policy and will be available within the app.
+7. Contact If you have any questions about this Privacy Policy, you can contact the developer through the contact information provided on the Google Play Store listing.
